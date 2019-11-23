@@ -14,12 +14,8 @@ public class WeatherAndForecastFragment extends Fragment {
     public WeatherAndForecastFragment() {
     }
 
-    public static WeatherAndForecastFragment newInstance(int page, String title) {
+    public static WeatherAndForecastFragment newInstance() {
         WeatherAndForecastFragment fragmentFirst = new WeatherAndForecastFragment();
-        Bundle args = new Bundle();
-        args.putInt("someInt", page);
-        args.putString("someTitle", title);
-        fragmentFirst.setArguments(args);
         return fragmentFirst;
     }
 
