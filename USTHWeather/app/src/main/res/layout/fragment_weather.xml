@@ -9,26 +9,23 @@
 
     <TextView
         android:id="@+id/degree"
-        android:layout_width="140dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:gravity="bottom|center_horizontal"
         android:text="21C"
         android:textSize="15sp" />
 
     <TextView
-        android:layout_width="140dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/degree"
-        android:gravity="center_horizontal"
         android:text="@string/cloudy"
         android:textSize="15sp" />
 
     <TextView
-        android:layout_width="200dp"
-        android:layout_height="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:gravity="center"
         android:text="Vatican City"
         android:textSize="15sp" />
 
