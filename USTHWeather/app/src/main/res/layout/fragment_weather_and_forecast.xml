@@ -6,14 +6,6 @@
     tools:context=".WeatherAndForecastFragment"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#BEFFC1"
-        tools:context=".WeatherFragment"
-        android:layout_margin="5dp">
-
-        <include layout="@layout/fragment_weather"/>
-    </RelativeLayout>
+    <include layout="@layout/fragment_weather"/>
     <include layout="@layout/fragment_forecast" />
 </LinearLayout>

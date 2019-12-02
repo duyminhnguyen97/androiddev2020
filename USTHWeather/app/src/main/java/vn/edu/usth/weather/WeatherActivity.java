@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.res.Resources;
 import android.util.Log;
 import android.os.Bundle;
 
@@ -16,7 +17,8 @@ public class WeatherActivity extends AppCompatActivity {
 
     public class HomeFragmentPagerAdapter extends FragmentPagerAdapter {
         private final int PAGE_COUNT = 3;
-        private String titles[] = new String[] { "Venice", "Vatican", "Rome" };
+        Resources res = getResources();
+        String[] currCity = res.getStringArray(R.array.cur_city);
 
         public HomeFragmentPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -37,7 +39,7 @@ public class WeatherActivity extends AppCompatActivity {
         }
         @Override
         public CharSequence getPageTitle(int page) {
-            return titles[page];
+            return currCity[page];
         }
     }
 
@@ -49,7 +51,7 @@ public class WeatherActivity extends AppCompatActivity {
 
         PagerAdapter adapter = new HomeFragmentPagerAdapter(getSupportFragmentManager());
         ViewPager pager = findViewById(R.id.pager);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+        TabLayout tabLayout = findViewById(R.id.tab);
 
         pager.setOffscreenPageLimit(3);
         pager.setAdapter(adapter);
